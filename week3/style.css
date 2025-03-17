@@ -1,0 +1,50 @@
+* {
+    color:hotpink;
+}
+
+body {
+    background-color:beige;
+}
+h1 {
+    color:limegreen;
+}
+li {
+    color:purple;
+}
+/* h2 {
+    color:yellow;
+} */
+ h2,
+h3 {
+    color:green;
+}
+.blue-color {
+    color:blue;
+}
+
+.yellow-color {
+    color:yellow;
+}
+#second-para {
+    color:chocolate;
+}
+/* h1 {
+    color:blue;
+}
+h2 {
+    color:yellow;
+}
+h3 {
+    color:green;
+}
+p {
+    /* color:brown; */
+    /* font-weight:bold */
+} */
+/* curly braces {} */
+/* square brackets [] */
+/* parentheses <> */
+/* round brackets () */
+/* colon : */
+/* semicolon ; */
+/* syntax - rules of writing */
