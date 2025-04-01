@@ -1,15 +1,16 @@
 console.log("Hi");
 console.log("how are you buddy?");
-myName = "katie";
+let myName = "katie";
 console.log("Hi, I am", myName);
-console.log("Hi, my student id is", myID);
-let myName = "Katie";
+
+myName = "Katie";
 console.log("Hi, I am", myName);
 let myID = "s4026243";
+
 console.log("Hi, my student id is", myID);
 myName = "abcd";
 console.log("Hi, I am", myName);
-let myNemName = "Melbourne";
+let myNewName = "Melbourne";
 console.log("Hello", myNewName);
 let myCity = "Perth";
 console.log("Hello", myNewName, myCity);
