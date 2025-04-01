@@ -14,3 +14,11 @@ let myNewName = "Melbourne";
 console.log("Hello", myNewName);
 let myCity = "Perth";
 console.log("Hello", myNewName, myCity);
+const weather = "foggy and gloomy";
+
+if (weather === "sunny") {
+  console.log("today is sunny weather");
+} else {
+  console.log("too bad no sun today");
+}
+let studentArray = ["Katie", "Sarah"];
