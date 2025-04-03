@@ -1,0 +1,209 @@
+/* <!-- I chose a color palette that contains 4 colors includes #F1E7E7 (for the background, but later I ended up not using that), #E69DB8 (For the header), #FFD0C7 (for the subheader) and #FFFECE (for the questions). https://colorhunt.co/palette/f1e7e7e69db8ffd0c7fffece--> */
+/* It is hard to actually choose a transition that resembles to the website, which was my top goal in this assignment, so I tried to make a hover transition to every boxes. These are just some basic features but I think It's appropriated at the moment. */
+/* For my latest personal interactive experience, I found the luni.app website was mostly using some infamous fonts like Montserrat, Helvetica, Sans. Because of that, they could focus on build up their website. However, since my website was not that advanced in interactive features, I decided to use uppercase and bold fonts. */
+/* Other than that, since the product was not meet up my expectation, I am now just tried to save my time as much as possible. */
+*,
+*::before,
+*::after {
+  box-sizing: content-box;
+}
+
+.container > div {
+  display: flexbox;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: inherit;
+  align-content: center;
+  width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  border: 5px solid whitesmoke;
+  overflow: auto;
+}
+body {
+  margin: 0;
+  scroll-padding: 70px;
+  line-height: 1.6;
+  word-spacing: 1.4px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  background-color: #2d336b;
+}
+.header:hover {
+  transition-duration: 0.5s;
+  background-color: blueviolet;
+  font-size: large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.subheader:hover {
+  transition-duration: 0.5s;
+  background-color: blueviolet;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: medium;
+}
+
+.question-1:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-1:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-2:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-transform: uppercase;
+}
+
+.answer-2:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: left;
+}
+
+.question-3:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.answer-3:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-4:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-4:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-5:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-5:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-6:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+.answer-6:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-7:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-7:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-8:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-8:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-9:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-9:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-10:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-10:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-11:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-11:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+
+.question-12:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-12:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
+.question-13:hover {
+  transition-duration: 0.5s;
+  background-color: cornflowerblue;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.answer-13:hover {
+  transition-duration: 0.5s;
+  background-color: darkblue;
+  text-align: center;
+}
