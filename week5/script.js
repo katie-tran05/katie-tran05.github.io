@@ -1,3 +1,22 @@
+// let a = 10;
+// let b = 20;
+
+function add(val1, val2){
+  let sum = val1 + val2
+  // console.log (sum);
+  return sum;
+}
+function whatIsMyGrade (marks){
+  if (marks < 40);
+console.log("sorry you failed");
+} else if
+
+
+
+
+
+
+
 console.log("Hi");
 console.log("how are you buddy?");
 let myName = "katie";
