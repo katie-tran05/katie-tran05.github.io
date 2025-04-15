@@ -24,3 +24,20 @@ pauseButton.addEventListener("click", pauseVideo);
 function pauseVideo() {
   myVideo.pause();
 }
+const playPauseButton = document.querySelector("#play-pause-button");
+console.log(playPauseButton);
+
+playPauseButton.addEventListener("click", toggleVideo);
+
+const playPauseImg = document.querySelector("#play-pause-img");
+console.log(playPauseImg);
+
+function toggleVideo (){
+  ig (myVideo.pause || myVideo.ended); {
+    myVideo.play();
+    playPauseImg.src="https://img.icons8.com/ios-glyphs/30/play--v2.png";
+  } else {
+    myVideo.pause();
+    playPauseImg.src="https://img.icons8.com/ios-glyphs/30/pause--v2.png";
+  }
+}
