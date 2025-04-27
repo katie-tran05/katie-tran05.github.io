@@ -40,7 +40,7 @@ console.log(popButton);
 
 popButton.addEventListener("click", popAudio);
 
-function pauseAudio() {
+function popAudio() {
   myNewHeading = "Popping sound";
   // airportAudio.pause();
   popSound.play();
