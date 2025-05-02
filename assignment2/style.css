@@ -246,6 +246,7 @@ body {
   }
 }
 /* media player */
+/* I try to make it look like a youtube playlist */
 .media-player {
   max-width: 1200px;
   margin: auto;
