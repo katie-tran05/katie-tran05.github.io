@@ -1,19 +1,176 @@
 :root {
-  --primary-bg-color: #f4f4f4;
-  --text-color: #333;
-  --main-bg-color: #333;
-  --main-text-color: #fff;
-  --main-btn-bg-color: #938989;
-}
-
-body,
-h1,
-p,
-ul {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+/* I organize the interaction of the navigation bar and put on a logo for the website */
+/* Header styling */
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  position: relative;
+  background-size: center;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+/* Navigation styling */
+nav .logo {
+  width: 80px;
+  margin-top: -10px;
+  cursor: pointer;
+  position: absolute;
+}
+.navbar {
+  width: 100%;
+  padding: 20px 8%;
+  position: absolute;
+  margin-top: 20px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+  font-size: 17px;
+}
+li a:hover {
+  background: white;
+  transition: 0.5s;
+}
+.navbar a:hover {
+  color: black;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.content h1 {
+  text-align: center;
+  font-size: 160px;
+  font-weight: 600;
+}
+.content h2 {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 200;
+}
+.content h1:hover {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  transition: 0.5s;
+}
+/* background video */
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
 }
 
+button {
+  width: 200px;
+  padding: 15px;
+  margin: 20px 5px;
+  text-align: center;
+  border-radius: 25px;
+  color: black;
+  border: 2px;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  background: white;
+  transition: 0.5s;
+  color: black;
+}
+/* body styling */
+/* about artist's infomation */
+/* Create a container for the main content */
+.container {
+  padding: 80px 0px;
+}
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 20px;
+}
+.container h3 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: red;
+}
+.container p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: white;
+  margin-bottom: 20px;
+}
+.about img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+@media screen and(max-width:768px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about {
+    max-width: 100%;
+  }
+  .about h3 {
+    font-size: 31px;
+  }
+  .about p {
+    font-size: 16px;
+  }
+}
 body {
   font-family: "Arial", sans-serif;
   background-color: var(--primary-bg-color);
@@ -25,89 +182,145 @@ body {
   justify-content: space-between;
 }
 
-/* Add additional styles as needed */
-
-/* Create a container for the main content */
-.container {
-  max-width: 1000px;
-  width: 100%;
-  padding: 10px;
-}
-
-/* Header styling */
-header {
-  background-color: var(--main-bg-color);
-  color: var(--main-text-color);
-  padding: 10px 0;
-  text-align: center;
-  width: 100%;
-}
-
-/* Navigation styling */
-nav {
-  margin-top: 20px;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
+/* Media player styling */
+.music-container {
   display: flex;
   justify-content: center;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-/* Media player styling */
-.media-player {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.media-player video {
-  max-width: 100%;
-}
-
-.custom-controls {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  margin-top: 10px;
-  width: 100%;
+  height: 100vh;
 }
-
-.custom-controls button {
-  background-color: var(--main-btn-bg-color);
-  color: var(--main-text-color);
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-size: 16px;
+.album {
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 1.5s;
+  transform: perspective(1000px) rotateY(0deg);
 }
-
-.progress-bar {
+.outer {
+  background-color: rgb(60, 49, 49);
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.card {
+  height: 300px;
+  width: 250px;
+  background-color: red;
+  position: relative;
+  left: 25%;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.card img {
+  width: 120%;
+}
+.inner img {
   width: 100%;
-  height: 10px;
-  background-color: #ddd;
-  margin-top: 10px;
+}
+.inner {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: white;
   overflow: hidden;
 }
-
-.progress-bar span {
-  display: block;
-  height: 100%;
-  background-color: var(--main-bg-color);
-  width: 0;
-  transition: width 0.3s ease;
+.album:hover .outer {
+  animation: rotate 1s infinite linear;
+  z-index: -1;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* media player */
+/* I try to make it look like a youtube playlist */
+.media-player {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+.main-video-container {
+  flex: 1 1 700px;
+  background-color: black;
+  padding: 15px;
+}
+.main-video {
+  margin-bottom: 7px;
+  width: 100%;
+}
+.main-video-title {
+  font-size: 20px;
+  color: #444;
+}
+.video-list {
+  flex: 1 1 300px;
+  border-left: 2px solid #eee;
+  background-color: black;
+  padding: 15px 15px 15px 35px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.list:last-child {
+  margin-bottom: 0;
+}
+.list. active {
+  background-color: grey;
+}
+.video-list .list. active. list-title {
+  color: white;
+}
+.list-video {
+  width: 100px;
+  border-radius: 5px;
+}
+.list-title {
+  font-size: 17px;
+  color: #444;
+}
+@media (max-width: 450px) {
+  .video-list {
+    border: none !important;
+    padding: 15px !important;
+  }
+  .main-video-title {
+    font-size: 15px;
+    text-align: center;
+  }
+  .list {
+    flex-flow: column;
+    gap: 10px;
+  }
+  .list-video {
+    width: 100%;
+  }
+  .list-title {
+    font-size: 15px;
+    text-align: center;
+  }
 }
 
 /* Footer styling */
