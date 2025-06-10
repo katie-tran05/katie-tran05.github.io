@@ -1,0 +1,137 @@
+:root{
+    --bulb-color:#fff;
+
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;    
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.light{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bulb{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: var(--bulb-color);
+    border-radius: 50%;
+    z-index: 2;
+}
+.bulb::before
+{
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: var(--bulb-color);
+    border-top: 30px solid #000;
+    border-radius: 10px;
+}
+.bulb span:nth-child(1)
+{
+    position: absolute;
+    top: -16px;
+    left: -4px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(342deg);
+    border-bottom-right-radius: 40px;
+    box-shadow: 20px 20px 0 10px var(--bulb-color);
+}
+.bulb span:nth-child(2)
+{
+    position: absolute;
+    top: -16px;
+    right: -4px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(17deg);
+    border-bottom-left-radius: 40px;
+    box-shadow: -20px 20px 0 10px var(--bulb-color);
+}
+.wire
+{
+    position: absolute;
+    left: calc(50% - 2px);
+    bottom: 50%;
+    width: 4px;
+    height: 60vh;
+    background: #000;
+    z-index: 1;
+    background: #8f8e8e;
+}
+.bulb::after{
+    position: absolute;
+    content: '';
+    width: 140px;
+    height: 140px;
+    background: var(--bulb-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 0%;
+    filter: blur(40px);
+    transform: translate(-18%, -40%);
+    box-shadow: 0 0 10px var(--bulb-color),
+                0 0 30px var(--bulb-color),
+                0 0 60px var(--bulb-color),
+                0 0 120px var(--bulb-color),
+                0 0 200px var(--bulb-color);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+#switch{visibility: hidden;}
+label{
+    cursor: pointer; 
+    width: 200px;
+    height: 100px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+    text-indent: -2000px;
+    background-color: #d2d2d2;
+}
+label:after{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+input:checked + label{
+    background-color: #000;
+}
+input:checked + label:after{
+    left: calc(50% - 5px);
+    transform;
+}
