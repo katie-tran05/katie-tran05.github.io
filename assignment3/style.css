@@ -1,137 +1,129 @@
-:root{
-    --bulb-color:#fff;
-
+:root {
+  --bulb-color: #fff;
 }
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    width: 100%;
-    height: 100vh;    
-    background: #222;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.light{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body.on {
+  background: radial-gradient(#555, #111);
 }
-.bulb{
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: var(--bulb-color);
-    border-radius: 50%;
-    z-index: 2;
+.light {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.bulb::before
-{
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: 22.5px;
-    width: 35px;
-    height: 80px;
-    background: var(--bulb-color);
-    border-top: 30px solid #000;
-    border-radius: 10px;
+.bulb {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: var(--bulb-color);
+  border-radius: 50%;
+  z-index: 2;
 }
-.bulb span:nth-child(1)
-{
-    position: absolute;
-    top: -16px;
-    left: -4px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    transform: rotate(342deg);
-    border-bottom-right-radius: 40px;
-    box-shadow: 20px 20px 0 10px var(--bulb-color);
+body.on .bulb {
+  background-color: #fff;
+  box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 200px #fff,
+    0 0 250px #fff, 0 0 300px #fff, 0 0 350px #fff;
 }
-.bulb span:nth-child(2)
-{
-    position: absolute;
-    top: -16px;
-    right: -4px;
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: transparent;
-    transform: rotate(17deg);
-    border-bottom-left-radius: 40px;
-    box-shadow: -20px 20px 0 10px var(--bulb-color);
+.bulb::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 22.5px;
+  width: 35px;
+  height: 80px;
+  background: var(--bulb-color);
+  border-top: 30px solid #000;
+  border-radius: 10px;
 }
-.wire
-{
-    position: absolute;
-    left: calc(50% - 2px);
-    bottom: 50%;
-    width: 4px;
-    height: 60vh;
-    background: #000;
-    z-index: 1;
-    background: #8f8e8e;
+body.on .bulb::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  filter: blur(40px);
 }
-.bulb::after{
-    position: absolute;
-    content: '';
-    width: 140px;
-    height: 140px;
-    background: var(--bulb-color);
-    border-radius: 50%;
-    top: 50%;
-    left: 0%;
-    filter: blur(40px);
-    transform: translate(-18%, -40%);
-    box-shadow: 0 0 10px var(--bulb-color),
-                0 0 30px var(--bulb-color),
-                0 0 60px var(--bulb-color),
-                0 0 120px var(--bulb-color),
-                0 0 200px var(--bulb-color);
+.bulb span:nth-child(1) {
+  position: absolute;
+  top: -16px;
+  left: -4px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  transform: rotate(342deg);
+  border-bottom-right-radius: 40px;
+  box-shadow: 20px 20px 0 10px var(--bulb-color);
 }
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: #222;
-    display: flex;
-    align-items: center;
-    justify-self: center;
+.bulb span:nth-child(2) {
+  position: absolute;
+  top: -16px;
+  right: -4px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  transform: rotate(17deg);
+  border-bottom-left-radius: 40px;
+  box-shadow: -20px 20px 0 10px var(--bulb-color);
 }
-#switch{visibility: hidden;}
-label{
-    cursor: pointer; 
-    width: 200px;
-    height: 100px;
-    border-radius: 200px;
-    cursor: pointer;
-    position: relative;
-    transition: 0.2s;
-    text-indent: -2000px;
-    background-color: #d2d2d2;
+.wire {
+  position: absolute;
+  left: calc(50% - 2px);
+  bottom: 50%;
+  width: 4px;
+  height: 60vh;
+  background: #000;
+  z-index: 1;
+  background: #8f8e8e;
 }
-label:after{
-    position: absolute;
-    content: '';
-    background-color: #fff;
-    top: 0;
-    left: 0;
-    width: 90px;
-    height: 90px;
-    border-radius: 200px;
-    margin: 5px;
-    transition: 0.2s;
+.switch {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(#eee, #ccc, #eee);
+  border: 3px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-input:checked + label{
-    background-color: #000;
+.switch .btn {
+  position: relative;
+  width: 25px;
+  height: 40px;
+  background: linear-gradient(#777, #fff, #777);
+  border-radius: 6px;
+  border: 2px solid #000;
+  cursor: pointer;
 }
-input:checked + label:after{
-    left: calc(50% - 5px);
-    transform;
+.switch .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background: linear-gradient(#fff, #fff);
+  border-radius: 4px;
+}
+.on .switch .btn::before {
+  top: 15%;
 }
