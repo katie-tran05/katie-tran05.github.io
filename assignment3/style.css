@@ -5,17 +5,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 body {
   width: 100%;
   height: 100vh;
-  background: #222;
+  background: #0e0e0e;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 body.on {
-  background: radial-gradient(#555, #111);
+  background: radial-gradient(#0a0a0a, #111);
 }
 .light {
   position: absolute;
@@ -126,4 +129,84 @@ body.on .bulb::after {
 }
 .on .switch .btn::before {
   top: 15%;
+}
+.container {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: 10px;
+  display: flex;
+  position: relative;
+  top: 150px;
+  left: 50px;
+  right: 150px;
+}
+.text1 {
+  margin-right: 20px;
+}
+.text2 {
+  color: darksalmon;
+}
+.text2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0e0e0e;
+  animation: animate 5s steps(10) infinite, animationTwo 5s infinite;
+}
+@keyframes animationTwo {
+  30% {
+    border-left: 2px solid darksalmon;
+  }
+  38% {
+    border-left: 2px solid darksalmon;
+  }
+  46% {
+    border-left: 2px solid darksalmon;
+  }
+  54% {
+    border-left: 2px solid darksalmon;
+  }
+  62% {
+    border-left: 2px solid darksalmon;
+  }
+  70% {
+    border-left: 2px solid darksalmon;
+  }
+  80% {
+    border-left: 2px solid darksalmon;
+  }
+}
+@keyframes animate {
+  3% {
+    left: 0%;
+  }
+  30% {
+    left: 100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+#audio {
+  display: none;
+}
+.torch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    transparent 10%,
+    rgba(0, 0, 0, 0.95) 20%
+  );
 }

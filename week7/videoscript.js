@@ -33,7 +33,7 @@ const playPauseImg = document.querySelector("#play-pause-img");
 console.log(playPauseImg);
 
 function toggleVideo (){
-  ig (myVideo.pause || myVideo.ended); {
+  if (myVideo.pause || myVideo.ended); {
     myVideo.play();
     playPauseImg.src="https://img.icons8.com/ios-glyphs/30/play--v2.png";
   } else {
